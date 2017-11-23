@@ -2,9 +2,9 @@
 
 ### An automatic file upload utility for Octoprint/Octopi
 
-Octogon is a simple command line utility which will montior a single folder on your local file system for the addition/modification of stl and gcode extension files and automatically copy them to your Octopi so they appear in your files list.
+Octogon is a simple command line utility which will monitor a single folder on your local file system for the addition/modification of ```.stl``` and ```.gcode``` extension files and automatically copy them to your Octopi so they appear in your files list.
 
-Octogon used SSH secure copy to move the files rather than Octoprint's REST Api and is very fast. Files are copied to the watched folder so they will automatically appear in your file list with no browser refresh required.
+Octogon uses SSH secure copy to move the files rather than Octoprint's REST Api and is very fast. Files are copied to the ```watched``` folder so they will automatically appear in your file list with no browser refresh required.
 
 ### Usage
 
@@ -24,7 +24,7 @@ Usage of octogon:
   -hp	string	Remote Hostname and Port to connect on (default "octopi.local:22")
   -ip	string	Remote IP address and Port to connect on
   -p	string	Password, required
-  -r	string	Remote folder to send files to. Default is none
+  -r	string	Remote folder to send files to. Default is none. Must exist.
   -u	string	User account to connect with (default "pi")
 
 ```
