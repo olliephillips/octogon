@@ -28,3 +28,11 @@ Usage of octogon:
   -u	string	User account to connect with (default "pi")
 
 ```
+
+### Binaries
+
+Built binaries for Linux, Mac & Windows can be found [here](https://github.com/olliephillips/octogon/releases/)
+
+### License
+
+Ocotogon is made available under MIT license.
