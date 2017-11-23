@@ -34,7 +34,7 @@ Usage of octogon:
 
 ### Releases
 
-Built binaries for Linux, Mac & Windows can be found [here]. (https://github.com/olliephillips/octogon/releases/)
+Built binaries for Linux, Mac & Windows can be found [here] (https://github.com/olliephillips/octogon/releases/)
 
 ### License
 
