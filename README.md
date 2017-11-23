@@ -14,7 +14,7 @@ By default Octogon connects with the user "pi" on octoprint.local, port 22, in m
 octogon -p mypassword
 ```
 
-Operation can be tailored by passing additional flags, you can see these with ```ocotogon -h```
+Operation can be tailored by passing additional flags, you can see these with ```octogon -h```
 
 ```
 Usage of octogon:
