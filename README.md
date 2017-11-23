@@ -6,7 +6,7 @@ Octogon is a simple command line utility which will monitor a single folder on y
 
 Octogon uses SSH secure copy to move the files rather than Octoprint's REST API. Files are copied to the ```watched``` folder so they will automatically appear in your file list with no browser refresh required.
 
-A folder can be specified which must exist on the Octopi. Uploads which target a folder are sent the ```uploads``` folder directly, a browser refresh may be required if you are already viewing the contents of that folder.
+A folder can be specified which must exist on the Octopi. Uploads which target a folder are sent to the ```uploads``` folder directly, a browser refresh may be required if you are already viewing the contents of that folder.
 
 ### Usage
 
