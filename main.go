@@ -64,7 +64,7 @@ func main() {
 	startMonitor()
 }
 
-// helper for gettinhg current directory
+// helper for getting current directory
 func getCurrentDir() (string, error) {
 	directory, err := os.Getwd()
 	if err != nil {
@@ -73,7 +73,7 @@ func getCurrentDir() (string, error) {
 	return directory, nil
 }
 
-// helper for consitent formatting of log output
+// helper for consistent formatting of log output
 func logger(msg interface{}, fatal bool) {
 	pretext := "Octogon:"
 	if !fatal {
@@ -112,7 +112,7 @@ func untrack(file string) {
 	mtx.Unlock()
 }
 
-// helper to check if delete flag passed and delete from local filesystem if required
+// helper to check if delete flag passed and delete from local file system if required
 func checkAndDelete(file string) {
 	if *del {
 		err := os.Remove(file)

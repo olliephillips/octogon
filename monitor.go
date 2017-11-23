@@ -15,7 +15,6 @@ func startMonitor() {
 	defer monitor.Close()
 
 	// which path
-
 	if *folder != "" {
 		dir = *folder
 	} else {
