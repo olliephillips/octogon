@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"os"
 	"path/filepath"
 	"time"
@@ -12,7 +11,6 @@ import (
 
 // send file using SSH secure copy
 func sendSCP(tfile string) {
-
 	logger("starting SSH session", false)
 
 	// config
@@ -50,7 +48,7 @@ func sendSCP(tfile string) {
 	}
 
 	remotePath += filepath.Base(tfile)
-	log.Println(remotePath)
+
 	logger("copying "+filepath.Base(tfile), false)
 	client.CopyFromFile(*f, remotePath, "0655")
 	logger("SSH session ended", false)
