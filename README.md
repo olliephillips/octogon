@@ -32,7 +32,7 @@ Usage of octogon:
 ```
 
 
-### Binaries
+### Releases
 
 Built binaries for Linux, Mac & Windows can be found [here]. (https://github.com/olliephillips/octogon/releases/)
 
