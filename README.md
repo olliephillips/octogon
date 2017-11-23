@@ -6,6 +6,8 @@ Octogon is a simple command line utility which will monitor a single folder on y
 
 Octogon uses SSH secure copy to move the files rather than Octoprint's REST Api and is very fast. Files are copied to the ```watched``` folder so they will automatically appear in your file list with no browser refresh required.
 
+A folder can specified which must exist on the Octopi. Uploads which target a folder are sent the ```uploads``` folder directly, a browser refresh may be required if you are already viewing the contents of that folder.
+
 ### Usage
 
 By default Octogon connects with the user "pi" on octoprint.local, port 22, in most cases only a password -p is required i.e
@@ -29,9 +31,10 @@ Usage of octogon:
 
 ```
 
+
 ### Binaries
 
-Built binaries for Linux, Mac & Windows can be found [here](https://github.com/olliephillips/octogon/releases/)
+Built binaries for Linux, Mac & Windows can be found [here]. (https://github.com/olliephillips/octogon/releases/)
 
 ### License
 
