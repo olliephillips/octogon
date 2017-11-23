@@ -1,0 +1,30 @@
+language: go
+go:
+  - 1.8
+gobuild_args: --ldflags "-X \"main.VERSION=$TRAVIS_TAG commit $TRAVIS_COMMIT\""
+
+before_deploy:
+  - mkdir release
+  - cp README.md README.txt
+  - 'GOARCH=amd64 GOOS=darwin go build --ldflags "-X \"main.VERSION=$TRAVIS_TAG commit $TRAVIS_COMMIT os=darwin-amd64\"" -o octogon && tar -zcf release/octogon-darwin-amd64.tar.gz octogon README.txt'
+  - 'GOARCH=amd64 GOOS=linux go build --ldflags "-X \"main.VERSION=$TRAVIS_TAG commit $TRAVIS_COMMIT os=linux-amd64\"" -o octogon && tar -zcf release/octogon-linux-amd64.tar.gz octogon README.txt'
+  - unix2dos -n README.md README.txt
+  - 'GOARCH=amd64 GOOS=windows go build --ldflags "-X \"main.VERSION=$TRAVIS_TAG commit $TRAVIS_COMMIT os=windows-amd64\"" -o octogon.exe && zip release/octogon-windows-amd64.zip octogon.exe README.txt'
+
+addons:
+  apt:
+    packages:
+      - dos2unix
+
+deploy:
+  skip_cleanup: true
+  tags: true
+  provider: releases
+  on:
+    repo: olliephillips/octogon
+    tags: true
+  api_key: $GITHUB_TOKEN
+  file:
+    - "release/octogon-darwin-amd64.tar.gz"
+    - "release/octogon-linux-amd64.tar.gz"
+    - "release/octogon-windows-amd64.zip"
