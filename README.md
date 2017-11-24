@@ -2,6 +2,8 @@
 
 ### An automatic file upload utility for Octoprint/Octopi
 
+[![Build Status](https://travis-ci.org/olliephillips/octogon.svg?branch=master)](https://travis-ci.org/olliephillips/octogon)
+
 Octogon is a simple command line utility which will monitor a single folder on your local file system for the addition/modification of ```.stl``` and ```.gcode``` extension files and automatically copy them to your Octopi so they appear in your files list.
 
 Octogon uses SSH secure copy to move the files rather than Octoprint's REST API. Files are copied to the ```watched``` folder so they will automatically appear in your file list with no browser refresh required.
