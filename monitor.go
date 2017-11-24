@@ -30,7 +30,7 @@ func startMonitor() {
 			select {
 			case event := <-monitor.Events:
 				if filepath.Ext(event.Name) == ".gcode" || filepath.Ext(event.Name) == ".stl" {
-					if event.Op&fsnotify.Write == fsnotify.Write {
+					if event.Op&fsnotify.Write == fsnotify.Write || event.Op&fsnotify.Create == fsnotify.Create {
 						msg := "file modified " + filepath.Base(event.Name)
 						logger(msg, false)
 
